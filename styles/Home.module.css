@@ -1,22 +1,105 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 4rem 0;
+}
+.accessoires {
+  width: 100vw;
+  background-color: #F3F3F3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+.accessoires p {
+  padding: 0 16px;
+  text-align: center;
 }
 
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
+.products {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-around;
+}
+.bloc {
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.femme {
+  text-align: center;
+}
+.image{
+  position: relative;
+  display: inline-block;
+  margin: 0 16px;
+}
+.image::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Couche noire semi-transparente */
+  pointer-events: none;
+}
+.textImage {
+  width: 80%;
+  position: absolute; /* Superpose le texte sur l'image */
+  top: 55%; /* Centre verticalement */
+  left: 50%; /* Centre horizontalement */
+  transform: translate(-50%, -50%); 
+  color: white; /* Couleur du texte */
+  font-weight: 300;
 }
 
-.title a:hover, .title a:focus, .title a:active {
-  text-decoration: underline;
+.textImageTitle{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 10px;
+  /* justify-content: center; */
+  font-size: 20px;
+  /* text-align: center; */
+  border: solid 2px white;
+  font-weight: 500;
+}
+
+.imageService {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.flag {
+  /* text-align: center; */
+  /* width: 50%; */
+  background-color: white;
+  color: #B557FD;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+@media (min-width: 504px) {
+  .container_blocImage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .textImageTitle{
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .container_blocImage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .textImageTitle{
+    font-size: 14px;
+  }
+
 }

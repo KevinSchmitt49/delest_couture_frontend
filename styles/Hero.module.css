@@ -1,0 +1,93 @@
+
+.container {
+    width : 100vw;
+    max-width : 1500px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    animation: carousel 12s infinite ease-in-out;
+}
+
+.img {
+    flex-shrink: 0;
+    width: 100%;
+    /* padding : 20px */
+}
+@keyframes carousel {
+    0%,25% {
+        transform: translateX(0);
+    }
+    30%,55% {
+        transform: translateX(-100%);
+    }
+    60%,85% {
+        transform: translateX(-200%);
+    }
+    90%,100% {
+        transform: translateX(-0%);
+    }
+
+}
+.dotContainer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-top: -4%;
+    width: 100%;
+    
+
+}
+.dot1, .dot2, .dot3 {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255,0.5);
+    margin-left: 5px;
+    border-radius: 50%;
+}
+
+.dot1 {
+    animation: carouselDot1 12s infinite ease-in-out;
+}
+
+@keyframes carouselDot1 {
+    0%,25% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+    30%,85% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    90%,100% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+.dot2 {
+    animation: carouselDot2 12s infinite ease-in-out;
+}
+@keyframes carouselDot2 {
+    0%,25% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    30%,55% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+    60%,100% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+.dot3 {
+    animation: carouselDot3 12s infinite ease-in-out;
+}
+@keyframes carouselDot3 {
+    0%,55% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    60%,85% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+    90%,100% {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
