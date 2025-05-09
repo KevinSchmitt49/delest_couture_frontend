@@ -1,0 +1,159 @@
+.status {} 
+.menu {
+    background-color: rgb(255, 255, 255);
+    width: 90vw;
+    /* height: 100vh; */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0px;
+    left:0px;
+    transform: translateX(-105%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    
+}
+.menu.open {
+    transform: translateX(0);
+  }
+.btnClose {
+    margin: 10px 0px 0px 9px ;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 15px;
+    width: 90%;
+  }
+
+.list li {
+    position: relative;
+    padding-left: 50px; /* Espace pour l'image */
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.list li::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    transform: rotate(180deg);
+    width: 25px; /* Largeur de l'image */
+    height: 25px; /* Hauteur de l'image */
+    background-image: url('/Arrow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .link {
+    color: #49454F;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .list li:hover{
+    color: #49454F;
+    background-color: rgba(0, 0, 0, 0.1);
+    /* text-decoration: underline #b6058f 5px;; */
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+  }
+  .li {
+    padding: 10px
+  }
+  .filet {
+    height: 2px;
+    width: 90%;
+    margin-left: 5%;
+    background-color: #49454F;
+  }
+
+  .adressesAteliers {
+    margin-left: 25px;
+  }
+  .btnMenu,.btnHoraires {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid #89868d 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #89868d;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-family:  Jost
+  }
+ 
+  .hoursContainer {
+    width: 80%;
+    height: 200px;
+    background-color: red;
+  }
+  .btnHoraires{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+  }
+  
+  .tableContainer{
+    font-size: 0.8rem;
+    font-weight: 400;
+    border-collapse: collapse;
+    text-transform: none;
+    border: 0;
+    text-align: left;
+    font-family:  Jost
+  }
+
+  .column1 {
+    width: 80px;
+  }
+
+  .containerOuvertureMag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* gap: 50px; */
+    /* justify-content: space-between; */
+    margin: 20px 20px 0 0;
+  }
+  .containerOuvertureMag p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+ 
+  .ouvert {
+    color: #12a535;
+  }
+
+  .ferme {
+    color: #721c24;
+  }
+
+  .dot {
+    width: 10px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: 0 10px 0 50px;
+  }
+  
+ 
+  .dotOuvert {
+    background-color: #12a535;
+  }
+  
+  .dotFerme {
+    background-color: #721c24;
+  }
+  
+  .dotBientotOuvert {
+    background-color: #f0ad4e;
+  }
+  
+  .dotBientotFerme {
+    background-color: #ff8c00;
+  }

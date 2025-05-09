@@ -1,11 +1,27 @@
 import styles from "../styles/Header.module.css";
 import Image from "next/image";
+import Menu from "./Menu";
+import { useState } from "react";
 
 function Header() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleShowMenu = () => {
+    setShowMenu((content) => !content);
+  };
+
+  const closeMenu = () => {
+    setShowMenu(false);
+  };
+  // console.log(showMenu);
+
   return (
     <nav className={styles.nav}>
       <div className={styles.navleft}>
-        <Image src="/burger_menu.png" alt="menu" width={40} height={40} />
+        <button onClick={toggleShowMenu} className={styles.btn}>
+          <Image src="/burger_menu.png" alt="menu" width={40} height={40} />
+        </button>
+        <Menu isOpen={showMenu} onClose={closeMenu} />
         <Image
           src="/logo_delest_couture.png"
           alt="logo Delest-couture"
