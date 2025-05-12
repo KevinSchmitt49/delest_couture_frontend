@@ -39,16 +39,17 @@ button {
   /* body {
     background-color: rgb(255, 0, 55);
   } */
-  p {
+  p, li {
     font-size: 14px;
   }
+
 }
 
 @media (min-width: 1024px) {
   /* body {
     background-color: blue;
   } */
-  p {
+  p, li {
     font-size: 12px;
   }
 }

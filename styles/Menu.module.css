@@ -1,4 +1,6 @@
-/* .status {}  */
+.status {
+    text-transform: uppercase;
+} 
 .menu {
     background-color: rgb(255, 255, 255);
     width: 90vw;
@@ -165,3 +167,5 @@
   .dotBientotFerme {
     background-color: #ff8c00;
   }
+
+ 
