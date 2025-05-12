@@ -4,6 +4,7 @@ import Head from "next/head";
 import Hero from "./Hero";
 import CarouselProducts from "./Carousel_product";
 import Image from "next/image";
+import Footer from "./footer";
 
 function Home() {
   return (
@@ -14,10 +15,7 @@ function Home() {
       <main className={styles.main}>
         <Header />
         <Hero />
-        <h2>
-          Nos créations
-          {/* <a href="https://delest-couture.com">Delest Couture</a> */}
-        </h2>
+        <h2>Nos créations</h2>
         <p>Découvrez nos toutes dernières créations.</p>
         <CarouselProducts />
         <section className={styles.accessoires}>
@@ -105,6 +103,7 @@ function Home() {
             </div>
           </div>
         </section>
+        <Footer />
       </main>
     </div>
   );

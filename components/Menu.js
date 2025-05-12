@@ -140,6 +140,7 @@ function Menu({ isOpen, onClose }) {
   const jourActuel = getJourActuel();
   const horaireActuel = horaires.find((h) => h.jour === jourActuel);
   const [etat, setEtat] = useState(estOuvert(horaireActuel.horaire));
+
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
@@ -154,10 +155,10 @@ function Menu({ isOpen, onClose }) {
   }, []);
 
   const messages = {
-    ouvert: "L'établissement est ouvert",
-    bientotOuvert: "L'établissement ouvre bientôt",
-    bientotFerme: "L'établissement ferme bientôt",
-    ferme: "L'établissement est fermé",
+    ouvert: "Ouvert",
+    bientotOuvert: "Ouvre bientôt",
+    bientotFerme: "Ferme bientôt",
+    ferme: "Fermé",
   };
 
   const table = (

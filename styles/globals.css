@@ -36,18 +36,18 @@ button {
 
 
 @media (min-width: 504px) {
-  body {
+  /* body {
     background-color: rgb(255, 0, 55);
-  }
+  } */
   p {
     font-size: 14px;
   }
 }
 
 @media (min-width: 1024px) {
-  body {
+  /* body {
     background-color: blue;
-  }
+  } */
   p {
     font-size: 12px;
   }

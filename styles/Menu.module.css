@@ -1,4 +1,4 @@
-.status {} 
+/* .status {}  */
 .menu {
     background-color: rgb(255, 255, 255);
     width: 90vw;
@@ -131,7 +131,15 @@
   }
 
   .ferme {
-    color: #721c24;
+    color: #c51224;
+  }
+
+   .bientotOuvert {
+    color: #f0ad4e;
+  }
+  
+  .bientotFerme {
+    color: #ff8c00;
   }
 
   .dot {
@@ -147,7 +155,7 @@
   }
   
   .dotFerme {
-    background-color: #721c24;
+    background-color: #c51224;
   }
   
   .dotBientotOuvert {
