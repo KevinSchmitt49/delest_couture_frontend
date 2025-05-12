@@ -1,7 +1,7 @@
 import styles from "../styles/Shop.module.css";
 import Services from "../components/Services";
 import Header from "../components/Header";
-import Footer from "../components/footer";
+import Footer from "../components/Footer";
 
 function Shop() {
   return (
