@@ -128,7 +128,7 @@ function Service() {
           </p>
         </section>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
