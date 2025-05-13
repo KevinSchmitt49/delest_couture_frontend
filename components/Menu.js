@@ -211,7 +211,6 @@ function Menu({ isOpen, onClose }) {
               <a className={styles.link}>Les actualités</a>
             </Link>
           </li>
-          {/* Ajoute d'autres liens selon tes besoins */}
         </ul>
         <div className={styles.filet}></div>
         <div className={styles.adressesAteliers}>

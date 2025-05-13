@@ -1,5 +1,4 @@
 import styles from "../styles/Service.module.css";
-import Footer from "./footer";
 
 function Service() {
   return (

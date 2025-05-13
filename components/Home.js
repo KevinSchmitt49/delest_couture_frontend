@@ -4,7 +4,6 @@ import Head from "next/head";
 import Hero from "./Hero";
 import CarouselProducts from "./Carousel_product";
 import Image from "next/image";
-import Footer from "./footer";
 
 function Home() {
   return (
@@ -103,7 +102,6 @@ function Home() {
             </div>
           </div>
         </section>
-        <Footer />
       </main>
     </div>
   );

@@ -30,7 +30,7 @@
 
 .list li {
     position: relative;
-    padding-left: 50px; /* Espace pour l'image */
+    padding-left: 50px; 
     margin-top: 10px;
     text-transform: uppercase;
 }
@@ -41,8 +41,8 @@
     left: 10px;
     top: 12px;
     transform: rotate(180deg);
-    width: 25px; /* Largeur de l'image */
-    height: 25px; /* Hauteur de l'image */
+    width: 25px; 
+    height: 25px; 
     background-image: url('/Arrow.png');
     background-size: contain;
     background-repeat: no-repeat;
