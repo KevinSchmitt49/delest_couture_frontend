@@ -1,0 +1,87 @@
+.container {
+    padding: 0 16px 16px 16px
+}
+.price {
+    font-size: 2rem;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.thumbnails {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.thumb {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 2px solid transparent;
+}
+
+.thumb:hover {
+    opacity: 1;
+}
+
+.addToCartContent{
+    padding: 16px;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    bottom: 0px;
+    box-shadow: 0px -5px 10px rgb(172, 172, 172);
+}
+
+.selectButton, .quantityAndAddToCart {
+    display: flex;
+    justify-content:space-between;
+}
+
+.selectButton {
+    margin-bottom: 20px;
+}
+
+.taille, .color, .quantity{
+    border: 1px solid rgb(107, 107, 107);
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: 500;
+    color:rgb(107, 107, 107)
+}
+.taille, .color{
+    width: 48%;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.addToCart {
+    color: white;
+    background-color: #B557FD;
+    border-radius: 20px;
+    padding: 0px 30px;
+    width: 70%;
+    font-family: jost;
+    font-weight:500;
+    font-size: 1rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.addToCart:hover {
+    background-color: #7c2cb9;
+    box-shadow: 0 0 10px purple;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}

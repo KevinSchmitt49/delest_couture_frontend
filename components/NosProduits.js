@@ -1,6 +1,7 @@
 import styles from "../styles/NosProduits.module.css";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const products = [
   {
@@ -200,23 +201,27 @@ function NosProduits() {
         <div className={styles.productList}>
           {displayedProducts.map((product, index) => (
             <div key={product.id} className={styles.productItem}>
-              <div className={styles.content}>
-                <Image
-                  src={
-                    currentImageIndexes.length > 0
-                      ? product.images[currentImageIndexes[index]]
-                      : "/attente.png" // une image par défaut
-                  }
-                  alt={product.name}
-                  width={490}
-                  height={700}
-                  priority={index === 0}
-                />
-                <div className={styles.text}>
-                  <span>{product.name}</span>
-                  <span className={styles.price}>{product.price}</span>
-                </div>
-              </div>
+              <Link href={`/produit/${product.id}`}>
+                <a>
+                  <div className={styles.content}>
+                    <Image
+                      src={
+                        currentImageIndexes.length > 0
+                          ? product.images[currentImageIndexes[index]]
+                          : "/attente.png" // une image par défaut
+                      }
+                      alt={product.name}
+                      width={490}
+                      height={700}
+                      priority={index === 0}
+                    />
+                    <div className={styles.text}>
+                      <span>{product.name}</span>
+                      <span className={styles.price}>{product.price}</span>
+                    </div>
+                  </div>
+                </a>
+              </Link>
               <div className={styles.arrows}>
                 <button onClick={() => prev(index)} className="nav-button">
                   <Image
