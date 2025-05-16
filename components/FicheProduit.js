@@ -1,12 +1,22 @@
 import Image from "next/image";
 import styles from "../styles/FicheProduit.module.css";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { updateCart } from "../reducers/cart";
 
 function FicheProduit({ product }) {
   const [selectedImage, setSelectedImage] = useState(product.images[0]);
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
   const [selectedQuantity, setSelectedQuantity] = useState(1);
+
+  const dispatch = useDispatch();
+  const quantityInCart = useSelector((state) => state.cart.value);
+  console.log("article dans le panier : ", quantityInCart);
+
+  const addToCart = (quantity) => {
+    dispatch(updateCart(quantity));
+  };
 
   const decrementQuantity = () => {
     selectedQuantity > 1 ? setSelectedQuantity(selectedQuantity - 1) : "";
@@ -87,7 +97,12 @@ function FicheProduit({ product }) {
                 <img src="/+.png" alt="+" />
               </button>
             </div>
-            <button className={styles.addToCart}>Ajouter au panier</button>
+            <button
+              className={styles.addToCart}
+              onClick={() => addToCart(selectedQuantity)}
+            >
+              Ajouter au panier
+            </button>
           </div>
         </div>
       </div>
