@@ -97,6 +97,53 @@
     border-radius: 10px;
     transition: all 0.5s ease-in-out;
 }
+.modalUpdateCart{
+    position: absolute;
+    top:50vh;
+    left:50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    background-color: rgb(215, 245, 215);
+    min-width: 40%;
+    padding: 5px 30px 50px;
+    gap:20px;
+    border: 1px solid green;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px black;
+}
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+/* .modalContent{
+    padding: 20px;
+} */
+.modal{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: green;
+    text-align: center;
+    /* position: relative; */
+    /* transform: translate(15%,-40%); */
+}
+.CTAClose {
+    /* display: flex; */
+    color: green;
+    position: relative;
+    gap: 20px
+}
+.btnClose{
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+.txtClose {
+    font-size:0.8rem;
+    font-weight: 500;
+}
+
 @media (min-width: 504px) {
   .main {
     display: flex;

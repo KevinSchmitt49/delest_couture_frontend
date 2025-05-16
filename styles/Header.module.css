@@ -1,5 +1,6 @@
 .nav {
   width: 100vw;
+  height: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -11,3 +12,28 @@
   align-items: center;
 }
 
+.navright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart {
+  position:relative
+}
+.dotNumber {
+  position: absolute;
+  background-color: green;
+  height: 15px;
+  top:6px;
+  left:20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  font-size: 0.6rem;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: 1px;
+}
+.hidden{
+  display: none;
+}

@@ -2,9 +2,11 @@ import styles from "../styles/Header.module.css";
 import Image from "next/image";
 import Menu from "./Menu";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
+  const quantityInCart = useSelector((state) => state.cart.value);
 
   const toggleShowMenu = () => {
     setShowMenu((content) => !content);
@@ -30,7 +32,16 @@ function Header() {
         />
       </div>
       <div className={styles.navright}>
-        <Image src="/cart_default.png" alt="panier" width={40} height={40} />
+        <div className={styles.cart}>
+          <Image src="/cart_default.png" alt="panier" width={40} height={40} />
+          <div
+            className={`${styles.dotNumber} ${
+              quantityInCart < 1 ? styles.hidden : ""
+            }`}
+          >
+            {quantityInCart}
+          </div>
+        </div>
         <Image
           src="/user_default.png"
           alt="mon compte"

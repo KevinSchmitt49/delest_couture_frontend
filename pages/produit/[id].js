@@ -74,7 +74,7 @@ export default function ProductPage() {
 
   // Si le produit n'est pas encore trouvé (ex: pendant SSR), ne rien afficher
   if (!product) return <p>Chargement...</p>;
-  console.log(product);
+  // console.log(product);
 
   return (
     <div>

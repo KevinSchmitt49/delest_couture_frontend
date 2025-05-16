@@ -12,7 +12,7 @@ function Footer() {
     else if (width >= 1024) setIsMobile(false);
   }, []);
 
-  console.log(isMobile);
+  // console.log(isMobile);
 
   const textBloc = (
     <div>

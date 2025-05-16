@@ -106,7 +106,7 @@ const estOuvert = (horaire) => {
 };
 // const now = new Date();
 
-console.log(estOuvert(horaires[0].horaire));
+// console.log(estOuvert(horaires[0].horaire));
 
 const getJourActuel = () => {
   const jours = [
